@@ -11,7 +11,7 @@ jobs:
       - name: Install dependencies
         run:  |
           sudo apt update
-          sudo apt install texlive-latex-extra texlive-lang-italian texlive-lang-english texlive-fonts-recommended texlive-bibtex-extra texlive-science libreoffice wget curl make rsync git
+          sudo apt install texlive-latex-extra texlive-lang-italian texlive-lang-english texlive-fonts-recommended texlive-bibtex-extra texlive-science libreoffice wget curl make rsync git pandoc
           curl -sf https://goblin.reaper.im/github.com/lucat1/statik | sudo sh
 
       - uses: actions/checkout@v1
@@ -28,7 +28,7 @@ jobs:
         run: ./.github/workflows/rec "*\.md$" ${GITHUB_WORKSPACE}/.github/workflows/md2pdf
 
       - name: Generate static directory listing
-        run: statik -b "https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}/" -i "\.pdf$" -e "\.git(hub)?|ignore"
+        run: statik -l -b "https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}/" -i "\.(pdf|link)$" -e "\.git(hub|ignore|keep)?"
 
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
