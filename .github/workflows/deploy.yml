@@ -24,6 +24,9 @@ jobs:
       - name: Recursively compile (doc|ppt)x? files
         run: ./.github/workflows/rec "*\.(doc|ppt)x?$" "libreoffice --headless --convert-to pdf --outdir ."
 
+      - name: Recursively compile md files
+        run: ./.github/workflows/rec "*\.md$" ${GITHUB_WORKSPACE}/.github/workflows/md2pdf
+
       - name: Generate static directory listing
         run: statik -b "https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}/" -i "\.pdf$" -e "\.git(hub)?|ignore"
 
