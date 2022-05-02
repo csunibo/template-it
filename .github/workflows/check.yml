@@ -1,6 +1,5 @@
 name: Lint file names
-on:
-  push
+on: push
 
 jobs:
   check:
@@ -11,7 +10,32 @@ jobs:
         with:
           fetch-depth: 1
       - uses: batista/lint-filenames@v1
-        name: Link file names under prove
+        name: Link file names under ./appunti
         with:
-          path: './prove'
-          pattern: '^(\.gitkeep|(totale|(parziale\d?)|orale|progetto)-((testo|soluzione)-)?\d{4}-\d{2}-\d{2}(-\w+)?\.\w+)$'
+          path: "./appunti"
+          pattern: '(\\.gitkeep|([a-z0-9]+(-[a-z0-9]+)*\\.[a-Z]+))'
+      - uses: batista/lint-filenames@v1
+        name: Link file names under ./esercizi
+        with:
+          path: "./esercizi"
+          pattern: '(\\.gitkeep|([a-z0-9]+(-[a-z0-9]+)*\\.[a-Z]+))'
+      - uses: batista/lint-filenames@v1
+        name: Link file names under ./libri
+        with:
+          path: "./libri"
+          pattern: '(\\.gitkeep|([a-z0-9]+(-[a-z0-9]+)*\\.[a-Z]+))'
+      - uses: batista/lint-filenames@v1
+        name: Link file names under ./lucidi
+        with:
+          path: "./lucidi"
+          pattern: '(\\.gitkeep|(\\d+-[a-z0-9]+(-[a-z0-9]+)*\\.[a-Z]+))'
+      - uses: batista/lint-filenames@v1
+        name: Link file names under ./prove
+        with:
+          path: "./prove"
+          pattern: '(\\.gitkeep|((totale\\|(parziale\\d?)\\|orale\\|progetto)-((testo\\|soluzione)-)?\\d{4}-\\d{2}-\\d{2}(-[a-z0-9]+)*\\.[a-Z]+))'
+      - uses: batista/lint-filenames@v1
+        name: Link file names under ./varie
+        with:
+          path: "./varie"
+          pattern: '(\\.gitkeep|([a-z0-9]+(-[a-z0-9]+)*\\.[a-Z]+))'
