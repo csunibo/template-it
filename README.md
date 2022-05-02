@@ -6,8 +6,8 @@ Laurea in Informatica.
 ## Presentazione
 
 [Questo sito]() elenca staticamente i contenuti della
-raccolta. Qui, documenti e presentazioni con estensione `.tex`, `.doc`, `.docx`,
-`.ppt` o `.pptx` sono automaticamente convertiti in formato PDF.
+raccolta. Qui, documenti e presentazioni con estensione `.md`, `.tex`, `.doc`,
+`.docx`, `.ppt` o `.pptx` sono automaticamente convertiti in formato PDF.
 
 ## Contribuire
 
