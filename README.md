@@ -19,9 +19,15 @@ essa sia specificata.
 
 Identificativo | Espressione regolare accettante i nomi dei contenuti
 -------------- | -----------------------------------------------------
-`appunti` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
-`esercizi` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
-`libri` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
-`lucidi` | `\d+-[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
-`prove`| `(totale\|(parziale\d?)\|orale\|progetto)-((testo\|soluzione)-)?\d{4}-\d{2}-\d{2}(-[a-z0-9]+)*(\.[A-Za-z]+)?`
-`varie` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`appunti` | `[a-z0-9]+(-[a-z0-9]+)*\.[a-Z]+`
+`esercizi` | `[a-z0-9]+(-[a-z0-9]+)*\.[a-Z]+`
+`libri` | `[a-z0-9]+(-[a-z0-9]+)*\.[a-Z]+`
+`lucidi` | `\d+-[a-z0-9]+(-[a-z0-9]+)*\.[a-Z]+`
+`prove`| `(totale\|(parziale\d?)\|orale\|progetto)-((testo\|soluzione)-)?\d{4}-\d{2}-\d{2}(-[a-z0-9]+)*\.[a-Z]+`
+`varie` | `[a-z0-9]+(-[a-z0-9]+)*\.[a-Z]+`
+
+Non sono ammessi:
+1. collegamenti pubblicitari o che puntano a risorse esterne non gratuite;
+1. programmi in formato binario;
+1. contenuti duplicati;
+1. risorse non rilevanti per l'insegnamento in questione.
