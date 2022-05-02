@@ -19,9 +19,9 @@ essa sia specificata.
 
 Identificativo | Espressione regolare accettante i nomi dei contenuti
 -------------- | -----------------------------------------------------
-`appunti` | 
-`esercizi` |
-`libri` |
-`lucidi` |
-`prove`| `(totale\|(parziale\d?)\|orale\|progetto)-((testo\|soluzione)-)?\d{4}-\d{2}-\d{2}(-\w+)?\.\w+`
-`varie` |
+`appunti` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`esercizi` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`libri` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`lucidi` | `\d+-[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`prove`| `(totale\|(parziale\d?)\|orale\|progetto)-((testo\|soluzione)-)?\d{4}-\d{2}-\d{2}(-[a-z0-9]+)*(\.[A-Za-z]+)?`
+`varie` | `[a-z0-9]+(-[a-z0-9]+)*(\.[A-Za-z]+)?`
