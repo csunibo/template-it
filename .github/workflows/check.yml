@@ -1,0 +1,17 @@
+name: Lint file names
+on:
+  push
+
+jobs:
+  check:
+    name: Check file names
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: batista/lint-filenames@v1
+        name: Link file names under prove
+        with:
+          path: './prove'
+          pattern: '^/(totale|(parziale\d?)|orale|progetto)-((testo|soluzione)-)?\d{4}-\d{2}-\d{2}(-\w+)?\.\w+$'
