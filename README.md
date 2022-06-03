@@ -1,7 +1,7 @@
 # \<Insegnamento\>
 
 Una raccolta di risorse per l'insegnamento di \<Insegnamento\> del Corso di
-Laurea in Informatica. 
+Laurea in Informatica.
 
 ## Presentazione
 
